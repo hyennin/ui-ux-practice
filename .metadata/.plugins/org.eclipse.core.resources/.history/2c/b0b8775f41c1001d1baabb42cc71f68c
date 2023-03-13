@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function stud(name, score, grade) {
+				this.name = name;
+				this.score = score;
+				this.grade = grade;
+				this.comment = function() {
+					alert(`${this.name} 학생의 점수는 ${this.score} 점이고, 등급은 ${this.grade} 입니다.`);
+				}
+			}
+			
+			let stud1 = new stud("김비야", 98, "A");
+			let stud2 = new stud("임재연", 60, "D");
+			let stud3 = new stud("신유림", 50, "F");
+			let stud4 = new stud("신윤영", 88, "B");
+			
+			stud1.comment();
+			stud2.comment();
+			stud3.comment();
+			stud4.comment();
+		</script>
+	</head>
+	<body>
+		생성자 TEST
+	</body>
+</html>

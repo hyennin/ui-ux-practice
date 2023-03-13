@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			const songs = [
+				"Ditto - NewJeans",
+	            "OMG -  NewJeans",
+	            "Teddy Bear - STAYC(스테이씨)",
+	            "Hype boy - NewJeans",
+	            "파이팅 해야지 (Feat. 이영지) - 부석순(SEVENTEEN)",
+	            "사건의 지평선 - 윤하(YOUNHA)"
+			];
+			
+			// 노래 추천 함수
+			function suggestSong() {
+				let index = Math.floor(Math.random() * songs.length);
+				return songs[index];
+			}
+			
+			// 노래 찾기 함수
+			function searchForSong(word) {
+				let song;
+				for(let i = 0; i < songs.length; i++) {
+					song = songs[i];
+					if(song.indexOf(word) >= 0) {
+						return song;
+					}
+				}
+				
+				return "없는 곡입니다.";
+			}
+			
+			let search_data = prompt("검색할 곡의 이름을 입력해주세요.");
+			let matchedSong = searchForSong(search_data);
+			alert("검색 결과 : " + matchedSong);
+			
+			let recommendSong = suggestSong();
+			alert("추천 노래 : " + recommentSong);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
